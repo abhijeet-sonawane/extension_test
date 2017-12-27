@@ -111,6 +111,9 @@ module.exports = {
 				req.bobjekt = req.bobjekt.setReferenceWhere("address", {
 					"city": "Mumbai"
 				})
+				throw {
+					error: "Your error"
+				}
 				return when.resolve()
 			},
 			_post: function(req, res) {
